@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Contador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 48px;
+            color: #007BFF;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contador</h1>
+
+    <h2 id="valor_atualizar">0</h2>
+
+    <div>
+        <button onclick='remover()'>-</button>
+        <button onclick='adicionar()'>+</button>
+    </div>
+
+    <script>
+        var contador = 0;
+        const h1 = window.document.getElementById("valor_atualizar");
+
+        function adicionar() {
+            contador = contador + 1;
+            h1.innerText = contador;
+        }
+
+        function remover() {
+            contador = contador - 1;
+            h1.innerText = contador;
+        }
+    </script>
+</body>
+
+</html>
